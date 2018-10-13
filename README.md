@@ -1,5 +1,5 @@
-# JohnDoe
-A Responsive Free One Page Portfolio Website template
+# zaheer.merali.org
+My personal website using the JohnDoe template
 
 
 
