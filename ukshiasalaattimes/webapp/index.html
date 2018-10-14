@@ -1,0 +1,189 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>UK Shia Salaat Times</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="jquery.mobile.min.css" />
+	<link rel="stylesheet" href="jquery.mobile.datebox.css" />
+
+	<script src="jquery-1.7.1.min.js"></script>
+	<script src="jquery.mobile.min.js"></script>  
+    <script src="jquery.mobile.datebox.js"></script>
+    <style type="text/css" media="screen">
+p.namaazlabel { padding: 8px; float: left; font: bold 26px "Helvetica Neue", Helvetica; } 
+p.namaaztime { padding: 8px; float: right; font: bold 26px "Helvetica Neue", Helvetica;}
+thedatelabel { padding: 8px; float: right; font: bold 26px "Helvetica Neue", Helvetica;}
+    </style>
+    <style type="text/css" media="screen">.nextnamaaz { color: green; }</style>
+<style type='text/css'>
+<!--
+    html { background-color: #333; }
+    @media only screen and (min-width: 1025px){
+        .ui-page {
+            width: 480px !important;
+            margin: 0 auto !important;
+            position: relative !important;
+            border-right: 5px #666 outset !important;
+            border-left: 5px #666 outset !important;
+        }
+    }
+-->
+</style>
+<!--    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script> -->
+    <script type="text/javascript" src="salaattimes.js"></script>
+<script type='text/javascript'>
+<!--
+$(document).bind('mobileinit',function(){
+    $.extend(  $.mobile , {
+      defaultPageTransition: "none"
+    });
+});
+//-->
+</script>
+
+    <script type="text/javascript">
+
+        console.log("starting...");
+        var now = new Date();
+        function saveSettings(event, ui) {
+            city = $("input:radio[name=city]:checked").val();
+            if (city != "London" && city != "Birmingham" && city != "Peterborough") {
+                console.log("not sure let's inspect");
+                cities = $("[name=city]");
+                console.log(cities);
+                c = cities[0];
+                if (c.getAttribute("checked")) {
+                    city = c.value;
+                } else if (cities[1].getAttribute("checked")) {
+                    c = cities[1];
+                    city = c.value;
+                }
+                else {
+                	c = cities[2];
+                	city = c.value;
+                }
+            }
+            console.log("city is ", city);
+
+            localStorage.setItem("city", city);
+            insert_namaaztimes(now);
+//           jQT.goBack();
+           //return false;
+        };
+        function loadSettings(event, ui) {
+            if (localStorage.getItem("city") == "Birmingham") {
+                console.log("birmingham");
+                $('input[id=city-birmingham]').attr('checked', true).checkboxradio("refresh");
+			    $('input[id=city-london]').attr('checked', false).checkboxradio("refresh");
+		    	$('input[id=city-peterborough]').attr('checked', false).checkboxradio("refresh");
+		    }
+		    else if (localStorage.getItem("city") == "Peterborough") {
+		    	console.log("peterborough");
+		    	$('input[id=city-peterborough]').attr('checked', true).checkboxradio("refresh");
+        		$('input[id=city-birmingham]').attr('checked', false).checkboxradio("refresh");
+			    $('input[id=city-london]').attr('checked', false).checkboxradio("refresh");
+		    }
+		    else {
+                console.log("london");
+                $('input[id=city-london]').attr('checked', true).checkboxradio("refresh");
+        		$('input[id=city-birmingham]').attr('checked', false).checkboxradio("refresh");
+		    	$('input[id=city-peterborough]').attr('checked', false).checkboxradio("refresh");
+		    }
+	    };
+        function changeRight() {
+            console.log("right");
+            newdate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 3, 0, 0, 0);
+            newdate.setDate(now.getDate() - 1);
+            now = newdate;
+            insert_namaaztimes(now, true);
+        };
+        function changeLeft() {
+            console.log("left");
+            newdate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 3, 0, 0, 0);
+            newdate.setDate(now.getDate() + 1);
+            now = newdate;
+            insert_namaaztimes(now, true);
+        };
+        function date_changed(event, ui) {
+            
+            console.log("Date changed to ", $('#salaat_date').val());
+            newdate = $('#salaat_date').data("datebox")._formatter("%Y-%m-%d", $('#salaat_date').data("datebox").theDate);
+            console.log("Date changed to ", newdate);
+
+            year = "" + newdate[0] + newdate[1] + newdate[2] + newdate[3];
+            month = "" + newdate[5] + newdate[6];
+            day = "" + newdate[8] + newdate[9];
+            thenewdate = new Date(year, month - 1, day, 3, 0, 0, 0);
+            now = thenewdate;
+            insert_namaaztimes(now, false);
+        }
+        $(function() {
+            if (!localStorage.getItem("city") || localStorage.getItem("city") == "undefined") {
+                localStorage.setItem("city", "London");
+            }
+            insert_namaaztimes(now, true);
+//                      $('#any_id').getCalendar();
+            $("#settings").bind("pagebeforehide", saveSettings);
+            $('#settings').live('pagebeforeshow', loadSettings);
+            $('#home').live('swipeleft', changeLeft);
+            $('#home').live('swiperight', changeRight);
+            $('#salaat_date').bind("change", date_changed);
+                    });
+    </script>
+
+</head> 
+<body> 
+    <div data-role="page" id="home" data-theme="a">
+        <div data-role="header">
+                <div data-role="fieldcontain">
+                    <!-- <label for="salaat_date" style="padding: 8px; float: left; font: bold 26px Helvetica Neue, Helvetica; color: green;">Date:</label> -->
+                    <input name="salaat_date" id="salaat_date" type="date" data-role="datebox" data-options='{"mode": "calbox", "calTodayButton": true, "centerWindow": true, "dateFormat": "%d %b %Y", "disableManualInput": true}'></input>
+                </div> 
+            <a data-role="button" href="#settings" data-icon="gear" class="ui-btn-right">Options</a>
+        </div>
+        <div data-role="content">
+
+            <ul data-role="listview">
+
+               <div><p id="label_imsaak" class="namaazlabel" style="margin-top:5px;">Imsaak</p><p id="today_imsaak" class="namaaztime" style="margin-top: 5px;"></p><div style="clear: both;"></div></div>
+                <div><p id="label_fajr" class="namaazlabel">Fajr</p><p id="today_fajr" class="namaaztime"></p><div style="clear: both;"></div></div>
+                <div><p id="label_sunrise" class="namaazlabel">Sunrise</p><p id="today_sunrise" class="namaaztime"></p><div style="clear: both;"></div></div>                
+                <div><p id="label_zohr" class="namaazlabel">Zohr</p><p id="today_zohr" class="namaaztime"></p><div style="clear: both;"></div></div>
+                <div><p id="label_sunset" class="namaazlabel">Sunset</p><p id="today_sunset" class="namaaztime"></p><div style="clear: both;"></div></div>
+                <div><p id="label_maghrib" class="namaazlabel">Maghrib</p><p id="today_maghrib" class="namaaztime"></p><div style="clear: both;"></div></div>
+                <div><p id="label_tomorrowfajr" class="namaazlabel">Tomorrow Fajr</p><p id="tomorrow_fajr" class="namaaztime"></p><div style="clear: both;"></div></div>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="page" id="settings" data-theme="a" data-title="Settings">
+        <div data-role="header">
+            <h1>Settings</h1>
+            <a href="#" data-rel="back" data-role="button">Back</a>
+        </div>
+        <div data-role="content">
+            <form action="#" method="get">
+            <fieldset data-role="controlgroup">
+                <legend>Closest City</legend>
+                <input type="radio" name="city" id="city-london" value="London" checked=true />
+                <label for="city-london">London</label>                
+                <input type="radio" name="city" id="city-birmingham" value="Birmingham" />
+                <label for="city-birmingham">Birmingham</label>
+                <input type="radio" name="city" id="city-peterborough" value="Peterborough" />
+                <label for="city-peterborough">Peterborough</label>
+            </fieldset>
+            </form>
+        </div>
+            
+    </div>
+<!--        <div id="calendar">
+            <div class="toolbar">
+                <h1>Calendar</h1>
+                <a class="button back" href="#home">Back</a>
+            </div>
+            <div id="any_id">
+		<ul id="the_calendar">
+		</ul>
+        </div> -->
+</body>
+</html>
