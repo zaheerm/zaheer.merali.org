@@ -1,253 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Website Title -->
-    <title>Zaheer Abbas Merali</title>
-    <!-- Bootstrap -->
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Font-Awesome -->
-    <!-- <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-	<!-- Lightbox -->
-	<link href="assets/lightbox/css/lightbox.css" rel="stylesheet">
-    <!-- Text Rotator-->
-	<link href="assets/textrotator/simpletextrotator.css" rel="stylesheet">
-	<!-- FlexSlider -->
-    <link href="assets/flexslider/flexslider.css" rel="stylesheet">
-	<!-- Theme Style -->
-    <link href="css/style.css" rel="stylesheet">
-	<!-- Animations -->
-    <link href="css/animate.css" rel="stylesheet">
-	<!-- Custom Favicon -->
-	<link href="img/favicon.ico?v=2" rel="shortcut icon" type="image/x-icon" /> 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="assets/html5shiv/html5shiv.js"></script>
-    <script src="assets/respond/respond.min.js"></script>
-    <![endif]-->
-  </head>
-    <body id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zaheer Merali | Builder, AI Architect</title>
+  <meta name="description" content="Zaheer Merali is a hands-on builder architecting enterprise AI at Cisco. 25 years of open source, scaling Webex through a pandemic, and now at the frontier where AI rewrites how we build.">
 
-      <!-- ****************************** Preloader ************************** -->
-      <div id="preloader"></div>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
 
-	  	<!-- ==========================
-        HEADER SECTION 
-        =========================== -->
-        <header id="home">
-		    <!-- creative menu -->
-            <div class="container-fluid">
-              <div class="row">
-                <div class="menu-wrap">
-				<nav class="menu">
-				    <!-- Menu Links -->
-					<div class="icon-list">
-						<a href="index.html#home"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
-						<a href="index.html#about"><i class="fa fa-fw fa-quote-left"></i><span>About</span></a>
-						<a href="index.html#service"><i class="fa fa-fw fa-globe"></i><span>Service</span></a>
-						<a href="index.html#contact"><i class="fas fa-fw fa-envelope"></i><span>Contact</span></a>
-					</div>
-				</nav>
-			    </div>
-			    <button class="menu-button" id="open-button"></button><!-- menu button -->
-              </div><!--/row-->
-            </div><!--/container-->
-		  <!-- Header Image -->
-          <section class="hero" id="hero">
-            <div class="container">
-			  <!-- Slider Button (don't edit!)-->
-              <div class="row">
-                <div class="col-md-12 text-right navicon">
-                  <a id="nav-toggle" class="nav_slide_button" href="index.html#"><span></span></a>
-                </div>
-              </div>
-			  <!-- HEADER HEADLINE -->
-              <div class="row">
-                <div class="col-md-8 col-md-offset-1 inner">
-                  <h1 class="animated fadeInDown">
-                    Z<span style="color:#E04343;">a</span>heer<br/>
-                    <span>M<span style="color:#FFE800">e</span>rali</span>
-                  </h1><!-- Title -->
-                  <h3 class="animated fadeInUp delay-05s"><span class="rotate">Leader,Engineer,SRE</span></h3><!-- Text Rotator -->
-                </div>
-              </div>
-			  <!-- Learn More Button -->
-              <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
-                  <a href="index.html#about" class="scrollto wow fadeInUp delay-5s ">
-			            <!-- <p >MORE</p> -->
-			            <p class="scrollto--arrow"><img src="img/scroll-down.png" alt="scroll down arrow"></p>
-			        </a>
-                </div>
-              </div>
-            </div>
-          </section>
-		  <!-- Header Image End -->
-        </header>
-		<!-- ==========================
-        HEADER SECTION END  
-        =========================== -->
-		
-		
-		
-		
-		<!-- ==========================
-        ABOUT SECTION  
-        =========================== -->
-        <section class="intro text-center section-padding color-bg" id="about">
-          <div class="container">
-		    <!-- WELCOME TEXT -->
-            <div class="row">
-              <div class="col-md-8 col-md-offset-2 wp1">
-                <h1 class="arrow">A little <span>about</span> me</h1><!-- Headline -->
-				<!-- about / welcome text -->
-                <p>I am a hands-on software engineering leader with over a decade of experience in Python, asynchronous programming and many years of experience doing continuous delivery, DevOps and SRE.</p>
-              </div>
-            </div>
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicon.ico" sizes="any">
+</head>
+<body id="top">
+
+  <!-- Skip to content -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo">Z<span>M</span></a>
+
+      <!-- Desktop links -->
+      <div class="nav__links">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#experience" class="nav__link">Experience</a>
+        <a href="#talks" class="nav__link">Talks</a>
+        <a href="#beyond" class="nav__link">Beyond Code</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile overlay -->
+    <div class="nav__overlay" aria-hidden="true">
+      <a href="#about" class="nav__overlay-link">About</a>
+      <a href="#experience" class="nav__overlay-link">Experience</a>
+      <a href="#talks" class="nav__overlay-link">Talks</a>
+      <a href="#beyond" class="nav__overlay-link">Beyond Code</a>
+      <a href="#contact" class="nav__overlay-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main id="main">
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero section" id="hero" aria-label="Introduction">
+      <div class="container hero__content">
+        <h1 class="text-display hero__name">Zaheer<br>Merali</h1>
+        <p class="hero__tagline">I scaled Webex when the world went remote overnight. Now I architect the AI infrastructure at Cisco. I build things that hold.</p>
+        <div class="hero__roles">
+          <span class="hero__role hero__role--highlight">AI Architect</span>
+          <span class="hero__role">Builder</span>
+          <span class="hero__role">Open Source Contributor</span>
+          <span class="hero__role">Endurance Athlete</span>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll scroll-indicator" aria-label="Scroll to about section">
+        <span>Scroll</span>
+        <svg class="scroll-indicator__arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M10 4 L10 16 M4 10 L10 16 L16 10"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- ============================================================
+         ABOUT
+         ============================================================ -->
+    <section class="about section" id="about" aria-label="About me">
+      <div class="container">
+        <div class="about__grid">
+          <!-- Photo -->
+          <div class="about__photo reveal">
+            <img src="img/zaheer-headshot.jpg" alt="Zaheer Merali" width="512" height="413">
           </div>
-        </section>
 
-
-
-
-<!-- ==========================
-        SERVICE SECTION 
-        =========================== -->
-        <section class="features text-center section-padding" id="service">
-          <div class="container">
-        <!-- Headline -->
-            <div class="row">
-              <div class="col-md-12">
-                <h1 class="arrow">Things I do for work and fun</h1>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-          <div class="services">
-          <!-- Service Box 1 -->
-                  <div class="col-md-4 wp2 item">
-                    <div class="icon">
-                      <i class="fa fa-laptop"></i><!-- Icon -->
-                    </div>
-                    <h2>Software Engineer</h2><!-- Title -->
-                    <p>15+ years of experience in building large Python applications. 14+ years of building horizontally scalable software for SaaS.</p><!-- Description -->
-                  </div>
-          <!-- Service Box 2 -->
-                  <div class="col-md-4 wp2 item delay-05s">
-                    <div class="icon">
-                      <i class="fa fa-globe"></i><!-- Icon -->
-                    </div>
-                    <h2>Charity Work</h2><!-- Title -->
-                    <p>Using my skills and experience to help out the communities dear to me, whether that be Internet, networking or audio/video.</p><!-- Description -->
-                  </div>
-          <!-- Service Box 3 -->
-                  <div class="col-md-4 wp2 item delay-1s">
-                    <div class="icon">
-                      <i class="fa fa-golf-ball"></i><!-- Icon -->
-                    </div>
-                    <h2>Golf</h2><!-- Title -->
-                    <p>I have fun playing golf, thinking and playing my way around challenging courses. I have played at Pebble Beach, Torrey Pines, Manele, Plantation course, The Belfry and many others around the world.</p><!-- Description -->
-                  </div>
+          <!-- Bio -->
+          <div class="about__text reveal">
+            <p class="section__label">About</p>
+            <h2 class="section__heading">I build the systems behind enterprise AI</h2>
+            <p class="text-body-lg">I architect the AI infrastructure behind Cisco Collaboration. Before that, 15+ years building and scaling the Webex cloud. I've been writing open source since 2001, building high-scale reliable distributed systems since 2006 and more recently shipping AI into production. The real kind, not the demo kind.</p>
+            <p>I use AI tools daily to plan, architect, code, review, and ship. I've spoken at Nvidia GTC and Cloud Native London about what it actually takes to run models at scale. AWS Solutions Architect certified.</p>
           </div>
-                  <div class="clearfix"></div>
-              </div>
-            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats reveal">
+          <div class="stat">
+            <div class="stat__number">15+</div>
+            <div class="stat__label">Years at Cisco</div>
           </div>
-        </section>
-
-
-
-
-			
-
-
-
-		
-		
-		<!-- ==========================
-        CONTACT SECTION
-        =========================== -->
-        <section class="text-center section-padding contact-wrap" id="contact">
-		  <!-- To Top Button -->
-          <a href="index.html#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
-          <div class="container">
-		    <!-- Headline -->
-            <div class="row">
-              <div class="col-md-12">
-                <h1 class="arrow">Drop <span>me</span> a line</h1>
-              </div>
-            </div>
-            <div class="row contact-details">
-			  <!-- LinkedIn Box -->
-              <div class="col-md-4">
-                <div class="dark-box box-hover">
-                  <h2><i class="fab fa-linkedin"></i><span>LinkedIn</span></h2>
-                  <p><a href="https://www.linkedin.com/in/zaheer-merali/">https://www.linkedin.com/in/zaheer-merali/</a></p>
-                </div>
-              </div>
-			  <!-- Phone Number Box -->
-              <div class="col-md-4">
-                <div class="dark-box box-hover">
-                  <h2><i class="fab fa-github"></i><span>Github</span></h2>
-                  <p><a href="https://github.com/zaheerm">https://github.com/zaheerm</a></p>
-                </div>
-              </div>
-			  <!-- E-Mail Box -->
-              <div class="col-md-4">
-                <div class="dark-box box-hover">
-                  <h2><i class="fa fa-paper-plane"></i><span>Email</span></h2>
-                  <p><a href="index.html#">zaheerabbas at merali dot org</a></p>
-                </div>
-              </div>
-            </div>
-			<br>
+          <div class="stat">
+            <div class="stat__number">25</div>
+            <div class="stat__label">Years in open source</div>
           </div>
-        </section>
-		<!-- ==========================
-        CONTACT SECTION END
-        =========================== -->
-		
-		
-		
-		
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- SmoothScroll -->           
-    <script type="text/javascript" src="assets/smoothscroll/smoothscroll.js"></script>
-    <!-- Bootstrap -->
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/waypoints.min.js"></script>
-    <!-- classie.js -->
-	<script src="js/classie.js"></script>
-    <!-- FlexSlider -->
-    <script src="assets/flexslider/jquery.flexslider.js"></script>
-	<!-- Modernizr -->
-    <script src="js/modernizr.js"></script>
-	<!-- Text Rotator -->
-	<script src="assets/textrotator/jquery.simple-text-rotator.js"></script>
-	<!-- Lightbox.js -->
-    <script src="assets/lightbox/js/lightbox.min.js"></script>
-    <!-- Google Maps --> 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeKBBPJTG3v5w3cNPAgM6ZsJiPyL1mP_o&amp;sensor=false"></script>
-	<!-- Theme JavaScript Core -->
-	<script src="js/main.js"></script>
-	<script src="js/script.js"></script>
+          <div class="stat">
+            <div class="stat__number">GTC</div>
+            <div class="stat__label">Nvidia speaker</div>
+          </div>
+          <div class="stat">
+            <div class="stat__number">AWS</div>
+            <div class="stat__label">Solutions Architect</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	
-	<!-- TEXT ROTATOR SETTINGS -->
-    <script type="text/javascript">
-    $(".rotate").textrotator({
-      animation: "fade", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
-      separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-      speed: 2000 // How many milliseconds until the next word show.
-    });
-    </script>
-	
-    </body>
+    <!-- ============================================================
+         EXPERIENCE / WHAT I DO
+         ============================================================ -->
+    <section class="experience section" id="experience" aria-label="What I do">
+      <div class="container">
+        <p class="section__label reveal">What I do</p>
+        <h2 class="section__heading reveal">Where I spend my engineering energy</h2>
+        <p class="section__intro reveal">From architecting AI infrastructure to contributing to open source. Here's what I'm focused on.</p>
+
+        <div class="experience__grid reveal-stagger">
+
+          <!-- Featured Card: Scaling Webex -->
+          <div class="card card--featured card--has-image reveal">
+            <img src="img/webex-traffic.png" alt="Webex Cloud Traffic graph showing explosive growth from near-zero to 300G+ during Covid lockdowns" class="card__image card__image--featured" loading="lazy">
+            <h3 class="card__title">Scaling Webex through a pandemic</h3>
+            <p class="card__text">When Covid hit, the world moved to video calls overnight. I was deep in the Webex infrastructure at Cisco. We scaled the platform by orders of magnitude in weeks, not months. 15+ years of architectural decisions were stress-tested in real time. Cloud-native, Kubernetes, global distribution. It all had to hold. It did.</p>
+          </div>
+
+          <!-- Card 1: Shipping with AI — JGS app as proof -->
+          <div class="card card--has-image reveal">
+            <img src="img/jgs-app.png" alt="Jaffery Golf Society app — tournament registration, results, and live scoring" class="card__image" loading="lazy">
+            <h3 class="card__title">Shipping real product with AI</h3>
+            <p class="card__text">I built the Jaffery Golf Society app end-to-end with Claude Code: frontend, backend, infrastructure covering tournament registration, results, statistics, live scoring. Planned, developed, and shipped. AI didn't just help, it was the entire development workflow.</p>
+          </div>
+
+          <!-- Card 2: Open Source — real stories -->
+          <div class="card card--has-image reveal">
+            <img src="img/gstreamer-inspect.png" alt="gst-inspect output showing Zaheer Merali as plugin author" class="card__image" loading="lazy">
+            <h3 class="card__title">Open source to scratch real itches</h3>
+            <p class="card__text">I got into GStreamer to build streaming and recording software for the Islamic Centre, and to render simulation videos for education. I've contributed to Kubernetes and CNCF projects to fix bugs I hit running infrastructure at scale. 25 years of solving my own problems in the open. Proud to be an Arctic Code Vault Contributor for many open source projects.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TALKS
+         ============================================================ -->
+    <section class="talks section" id="talks" aria-label="Talks">
+      <div class="container">
+        <p class="section__label reveal">Talks</p>
+        <h2 class="section__heading reveal">On stage</h2>
+        <p class="section__intro reveal">Sharing what I've learned about putting AI into production reliably and cost-effectively at scale.</p>
+
+        <div class="talks__grid reveal-stagger">
+
+          <!-- Talk 1: Nvidia GTC -->
+          <div class="talk-card reveal">
+            <h3 class="talk-card__title">Supercharge Enterprise AI Inference</h3>
+            <span class="talk-card__venue">Nvidia GTC 2025</span>
+            <p class="talk-card__description">Panel on deploying and scaling AI models in enterprise.</p>
+            <a href="https://www.nvidia.com/en-us/on-demand/session/gtc25-s74273/" class="talk-card__link" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              <span>Watch</span>
+            </a>
+          </div>
+
+          <!-- Talk 2: Cloud Native London -->
+          <div class="talk-card reveal">
+            <h3 class="talk-card__title">AI Model Hosting: K8s?</h3>
+            <span class="talk-card__venue">Cloud Native London, Sept 2024</span>
+            <p class="talk-card__description">Why managed model hosting beats self-hosting for inference.</p>
+            <a href="https://www.youtube.com/live/0RokKz81TjM?si=2p7bo-ZLeTnnhn1y&t=845" class="talk-card__link" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              <span>Watch</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         BEYOND CODE
+         ============================================================ -->
+    <section class="beyond section" id="beyond" aria-label="Beyond code">
+      <div class="container">
+        <p class="section__label reveal">Beyond code</p>
+        <h2 class="section__heading reveal">The same discipline, different terrain</h2>
+        <p class="section__intro reveal">Engineering is an endurance sport. The patience, the long game, the willingness to push through. It shows up everywhere.</p>
+
+        <div class="beyond__grid reveal-stagger">
+
+          <!-- Card 1: Golf -->
+          <div class="card card--warm card--has-image reveal">
+            <img src="img/golf.jpg" alt="Zaheer holding a trophy at the golf club" class="card__image" loading="lazy">
+            <h3 class="card__title">Golf</h3>
+            <p class="card__text">Member at Sandy Lodge with a handicap of 10. Captain of the Jaffery Golf Society. I've played courses around the world: Pebble Beach, Torrey Pines, The Belfry, Manele, and the Plantation Course in Hawai'i.</p>
+          </div>
+
+          <!-- Card 2: Endurance -->
+          <div class="card card--warm card--has-image reveal">
+            <img src="img/basrah-karbala.jpg" alt="Zaheer in red helmet leading DesiRiders cyclists on the Basrah to Karbala ride" class="card__image" loading="lazy">
+            <h3 class="card__title">Endurance</h3>
+            <p class="card__text">Exec at <a href="https://desiriders.cc" class="link" target="_blank" rel="noopener noreferrer">DesiRiders</a> with whom I ride frequent epic cycling journeys, most recently 550km from Basrah to Karbala raising over &pound;300k for charity. I also run and have completed two half marathons: Barcelona and Royal Parks.</p>
+          </div>
+
+          <!-- Card 3: Community -->
+          <div class="card card--warm card--has-image reveal">
+            <img src="img/community.jpg" alt="Hand in Heart charity supplies for community support" class="card__image" loading="lazy">
+            <h3 class="card__title">Community</h3>
+            <p class="card__text">Built infrastructure-as-code and AV systems for KSIMC of London. Volunteered for a few charities including Hand on Heart as well as for the USGA at the US Open at Pebble Beach, the US Women's Open at CordeValle.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+         ============================================================ -->
+    <section class="contact section" id="contact" aria-label="Contact">
+      <div class="container">
+        <p class="section__label reveal">Get in touch</p>
+        <h2 class="section__heading section__heading--light reveal">I'm available for conversations</h2>
+        <p class="section__intro section__intro--light reveal" style="margin-inline: auto;">Advisory on AI infrastructure, building something at scale or speaking invitations. If you're past the demo stage and into the hard part, I'd like to talk.</p>
+
+        <div class="contact-links reveal">
+          <a href="https://www.linkedin.com/in/zaheer-merali/" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <svg class="contact-link__icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            <span>View on LinkedIn</span>
+          </a>
+          <a href="https://github.com/zaheerm" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <svg class="contact-link__icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+            <span>See on GitHub</span>
+          </a>
+          <a href="mailto:zaheerabbas@merali.org" class="contact-link">
+            <svg class="contact-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <polyline points="22,4 12,13 2,4"/>
+            </svg>
+            <span>Get in touch</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">&copy; 2026 Zaheer Merali</p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT — Minimal, no dependencies
+       ============================================================ -->
+  <script>
+    (function () {
+      'use strict';
+
+      // --- Mobile nav toggle ---
+      const hamburger = document.querySelector('.nav__hamburger');
+      const overlay = document.querySelector('.nav__overlay');
+      const overlayLinks = document.querySelectorAll('.nav__overlay-link');
+
+      function toggleMenu() {
+        const isOpen = hamburger.classList.toggle('open');
+        overlay.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        overlay.setAttribute('aria-hidden', !isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      }
+
+      hamburger.addEventListener('click', toggleMenu);
+      overlayLinks.forEach(function (link) {
+        link.addEventListener('click', toggleMenu);
+      });
+
+      // --- Nav background on scroll ---
+      const nav = document.querySelector('.nav');
+      const hero = document.querySelector('.hero');
+
+      var navObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          nav.classList.toggle('scrolled', !entry.isIntersecting);
+        });
+      }, { threshold: 0.1 });
+
+      navObserver.observe(hero);
+
+      // --- Active nav link tracking ---
+      var sections = document.querySelectorAll('section[id]');
+      var navLinks = document.querySelectorAll('.nav__link');
+
+      var sectionObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.getAttribute('id');
+            navLinks.forEach(function (link) {
+              link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+            });
+          }
+        });
+      }, { threshold: 0.3, rootMargin: '-80px 0px -50% 0px' });
+
+      sections.forEach(function (section) {
+        sectionObserver.observe(section);
+      });
+
+      // --- Scroll reveal ---
+      var reveals = document.querySelectorAll('.reveal');
+
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      reveals.forEach(function (el) {
+        revealObserver.observe(el);
+      });
+    })();
+  </script>
+
+</body>
 </html>
